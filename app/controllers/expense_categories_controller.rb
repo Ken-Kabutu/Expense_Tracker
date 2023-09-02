@@ -3,8 +3,8 @@ class ExpenseCategoriesController < ApplicationController
   
     # GET /expense_categories
     def index
-      @expense_categories = ExpenseCategory.all
-      render json: @expense_categories
+        @expense_categories = ExpenseCategory.all
+        render json: @expense_categories, each_serializer: ExpenseCategorySerializer
     end
   
     # GET /expense_categories/1
