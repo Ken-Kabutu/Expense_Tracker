@@ -8,12 +8,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   
-  resources :users do
-    resources :expenses
-  end
-
-  resources :expense_categories do
-    resources :expenses
-  end
+  resources :expenses, only: [:index, :show, :create, :update, :destroy]
+  resources :expense_categories, only: [:index, :show, :create, :update, :destroy]
 
 end
