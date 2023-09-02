@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   # Leave this here to help deploy your app later!
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 
+  # route for devise
+  devise_for :users
+
+  
   resources :users do
     resources :expenses
   end
@@ -11,5 +15,5 @@ Rails.application.routes.draw do
   resources :expense_categories do
     resources :expenses
   end
-  
+
 end
