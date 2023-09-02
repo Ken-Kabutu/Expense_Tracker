@@ -1,3 +1,6 @@
 class ExpenseSerializer < ActiveModel::Serializer
-  attributes :id
+  include FastJsonapi::ObjectSerializer
+  attributes :amount, :date, :description
+  belongs_to :user
+  belongs_to :expense_category
 end
