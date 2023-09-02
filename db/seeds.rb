@@ -1,7 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts "seeding..."
+
+# Create default expense categories
+ExpenseCategory.create(name: 'General')
+ExpenseCategory.create(name: 'Family and Friends')
+ExpenseCategory.create(name: 'Business Related')
+
+# Create sample expenses
+User.first.expenses.create(
+  expense_category_id: ExpenseCategory.first.id,
+  amount: 50.0,
+  date: Date.today,
+  description: 'Lunch with friends'
+)
+
+
+puts "...seeding complete"
