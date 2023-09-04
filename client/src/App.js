@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import ExpenseEntryForm from './components/ExpenseEntryForm'; 
-// import ExpenseList from './components/ExpenseList'; 
+import ExpenseList from './components/ExpenseList'; 
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         {/* Render the ExpenseEntryForm component */}
         <ExpenseEntryForm />
         {/* Render the ExpenseList component */}
-        {/* <ExpenseList /> */}
+        <ExpenseList />
       </header>
     </div>
   );
