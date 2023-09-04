@@ -6,4 +6,14 @@ function ExpenseForm() {
         date: '',
         description: '',
     });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setExpenseData({
+            ...expenseData,
+            [name]:value,
+        });
+    };
+
+    
 }
