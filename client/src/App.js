@@ -1,22 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import ExpenseEntryForm from './components/ExpenseEntryForm'; 
+// import ExpenseList from './components/ExpenseList'; 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn how the app works
-        </a>
+        <p>EXPENSE TRACKER</p>
+        Learn how the app works
+
+        {/* Render the ExpenseEntryForm component */}
+        <ExpenseEntryForm />
+        {/* Render the ExpenseList component */}
+        {/* <ExpenseList /> */}
       </header>
     </div>
   );
